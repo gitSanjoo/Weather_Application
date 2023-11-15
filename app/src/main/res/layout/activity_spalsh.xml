@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spalsh_screen"
+    tools:context=".SpalshActivity">
+    <ImageView
+        android:id="@+id/cloudIV"
+        android:layout_width="211dp"
+        android:layout_height="140dp"
+        android:src="@drawable/white_cloud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="270dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Weather matters,\nWe have got the details"
+        android:textSize="25sp"
+        android:fontFamily="@font/merriweathersans_bold"
+        android:layout_marginTop="67dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/cloudIV"
+        app:layout_constraintEnd_toEndOf="@+id/cloudIV"
+        app:layout_constraintTop_toBottomOf="@+id/cloudIV"/>
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Designed by\nSanju"
+        android:textSize="14sp"
+    android:layout_marginBottom="20dp"
+        android:fontFamily="@font/merriweathersans_medium"
+        android:layout_marginTop="67dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/cloudIV"
+        app:layout_constraintEnd_toEndOf="@+id/cloudIV"
+    app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
