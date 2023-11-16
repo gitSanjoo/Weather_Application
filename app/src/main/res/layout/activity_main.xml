@@ -6,152 +6,374 @@
     android:layout_height="match_parent"
     android:background="@drawable/sunny_background"
     tools:context=".MainActivity">
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/serachView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginRight="8dp"
-        app:queryHint="Search For a City"
-        app:iconifiedByDefault="false"
         android:background="@drawable/searchviewshape"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:queryHint="Search For a City" />
+
     <TextView
-        android:id="@+id/tvLocation"
+        android:id="@+id/cityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/serachView"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/serachView"
-        app:layout_constraintTop_toBottomOf="@+id/serachView"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintStart_toStartOf="@+id/serachView"
+        app:layout_constraintTop_toBottomOf="@+id/serachView" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/loctaion"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/serachView"
-        app:layout_constraintEnd_toStartOf="@+id/tvLocation"/>
+        android:src="@drawable/loctaion"
+        app:layout_constraintEnd_toStartOf="@+id/cityName"
+        app:layout_constraintTop_toBottomOf="@+id/serachView" />
+
     <TextView
         android:id="@+id/tvcelcius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocation"
         android:layout_marginEnd="50dp"
-        />
+        android:text="Today"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/ivSunny"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:lottie_rawRes="@raw/sun"
-        app:layout_constraintStart_toStartOf="@+id/serachView"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocation"
         android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/serachView"
+        app:layout_constraintTop_toBottomOf="@+id/cityName"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true"/>
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sun" />
+
     <TextView
+        android:id="@+id/temprature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00:00 celcius"
-        app:layout_constraintStart_toStartOf="@+id/tvcelcius"
+        android:text="00:00c"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/tvcelcius"
-        app:layout_constraintTop_toBottomOf="@+id/tvcelcius"/>
+        app:layout_constraintStart_toStartOf="@+id/tvcelcius"
+        app:layout_constraintTop_toBottomOf="@+id/tvcelcius" />
+
     <TextView
-        android:id="@+id/tvSunny"
+        android:id="@+id/tvWeather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sunny"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/ivSunny"
+        android:text="Sunny"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/ivSunny"
-        app:layout_constraintTop_toBottomOf="@+id/ivSunny"/>
+        app:layout_constraintStart_toStartOf="@+id/ivSunny"
+        app:layout_constraintTop_toBottomOf="@+id/ivSunny" />
 
     <TextView
         android:id="@+id/tvMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:textSize="16sp"
         android:text="MAX : 00:00 celcius"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvSunny"/>
- <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tvWeather" />
+
+    <TextView
         android:id="@+id/tvMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         android:text="Min : 00:00 celcius"
+        app:layout_constraintEnd_toEndOf="@+id/tvMax"
+        app:layout_constraintStart_toStartOf="@+id/tvMax"
+        app:layout_constraintTop_toBottomOf="@+id/tvMax" />
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tuesday"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-     android:layout_marginEnd="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvMax"/>
-<TextView
-    android:id="@+id/tvDay"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tvMin"
-    android:layout_marginTop="20dp"
-    android:text="Tuesday"/>
-<TextView
-    android:id="@+id/tvDate"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/tvDay"
-    android:layout_marginTop="8dp"
-    android:text="Date"/>
-    <FrameLayout
-        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMin" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDay" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
         android:layout_height="220dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/backgroundshape"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate"
-        android:layout_marginTop="8dp">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:id="@+id/ll1"
-                android:layout_width="80dp"
-                android:layout_height="88dp"
-                android:orientation="vertical"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/backgroundshape">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/humidity"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="8dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+            android:layout_width="80dp"
+            android:layout_height="88dp"
+            android:background="@drawable/backgroundshape"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/humidity" />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="0.0%"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="text"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_gravity="center"
-                android:layout_marginTop="4dp"/>
-                  <TextView
+                android:layout_marginTop="2dp"
+                android:text="Humidity"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+ <LinearLayout
+            android:id="@+id/linearLayout2"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout1"
+            app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+     app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            android:layout_width="80dp"
+            android:layout_height="88dp"
+            android:background="@drawable/backgroundshape"
+            android:orientation="vertical">
+
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="text"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_gravity="center"
-                android:layout_marginTop="2dp"/>
-            </LinearLayout>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/wind" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </FrameLayout>
+            <TextView
+                android:id="@+id/windSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="o.oom/s"
+                app:layout_constraintStart_toStartOf="parent" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Wind Speed"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent" />
 
+        </LinearLayout>
+ <LinearLayout
+            android:id="@+id/linearLayout3"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+     app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="88dp"
+            android:background="@drawable/backgroundshape"
+            android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/conditions" />
+
+            <TextView
+                android:id="@+id/sunny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="sunny"
+                android:textAllCaps="true"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Conditions"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+ <LinearLayout
+            android:id="@+id/linearLayout4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+            android:layout_width="80dp"
+            android:layout_height="88dp"
+            android:background="@drawable/backgroundshape"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/sunrise" />
+
+            <TextView
+                android:id="@+id/sunrise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="00:00"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Sunrise"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+ <LinearLayout
+            android:id="@+id/linearLayout5"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+     app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+     app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+     app:layout_constraintBottom_toBottomOf="parent"
+     android:layout_width="80dp"
+            android:layout_height="88dp"
+            android:background="@drawable/backgroundshape"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/sunset" />
+
+            <TextView
+                android:id="@+id/sunset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="00:00"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Sunset"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+ <LinearLayout
+            android:id="@+id/linearLayout6"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="88dp"
+            android:background="@drawable/backgroundshape"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/sea" />
+
+            <TextView
+                android:id="@+id/sea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="0000 hPa"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Sea"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Designed by\nSanju"
+        android:textSize="14sp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/merriweathersans_medium"
+        android:layout_marginTop="67dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
