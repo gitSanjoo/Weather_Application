@@ -26,6 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweathersans_medium"
+        android:textColor="#040303"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/serachView"
         app:layout_constraintStart_toStartOf="@+id/serachView"
@@ -45,7 +47,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="50dp"
+        android:fontFamily="@font/merriweathersans_bold"
         android:text="Today"
+        android:textColor="#F70B0A0A"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cityName" />
@@ -65,7 +69,9 @@
         android:id="@+id/temprature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweathersans_semibold"
         android:text="00:00c"
+        android:textColor="#F70B0A0A"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/tvcelcius"
         app:layout_constraintStart_toStartOf="@+id/tvcelcius"
@@ -76,7 +82,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="Sunny"
+        android:textColor="#F70B0A0A"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/ivSunny"
         app:layout_constraintStart_toStartOf="@+id/ivSunny"
@@ -87,8 +95,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="50dp"
-        android:textSize="16sp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="MAX : 00:00 celcius"
+        android:textColor="#F70B0A0A"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWeather" />
 
@@ -96,8 +106,10 @@
         android:id="@+id/tvMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="Min : 00:00 celcius"
+        android:textColor="#F70B0A0A"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tvMax"
         app:layout_constraintStart_toStartOf="@+id/tvMax"
         app:layout_constraintTop_toBottomOf="@+id/tvMax" />
@@ -107,7 +119,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/merriweathersans_bold"
         android:text="Tuesday"
+        android:textColor="#F70B0A0A"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +132,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/merriweathersans_regular"
         android:text="Date"
+        android:textColor="#F70B0A0A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDay" />
@@ -158,7 +174,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
+                android:fontFamily="@font/merriweathersans_medium"
                 android:text="0.0%"
+                android:textColor="#040303"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
@@ -166,7 +184,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
+                android:fontFamily="@font/merriweathersans_medium"
                 android:text="Humidity"
+                android:textColor="#040303"
                 android:textSize="10sp"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -190,23 +210,27 @@
                 android:layout_marginBottom="5dp"
                 android:src="@drawable/wind" />
 
-            <TextView
-                android:id="@+id/windSpeed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:text="o.oom/s"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:id="@+id/windSpeed"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="4dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="o.oom/s"
+         android:textColor="#040303"
+         app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="2dp"
-                android:text="Wind Speed"
-                android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="2dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="Wind Speed"
+         android:textColor="#040303"
+         android:textSize="10sp"
+         app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
  <LinearLayout
@@ -227,24 +251,28 @@
                 android:layout_marginTop="8dp"
                 android:src="@drawable/conditions" />
 
-            <TextView
-                android:id="@+id/sunny"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:text="sunny"
-                android:textAllCaps="true"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:id="@+id/sunny"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="4dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="sunny"
+         android:textAllCaps="true"
+         android:textColor="#040303"
+         app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="2dp"
-                android:text="Conditions"
-                android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="2dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="Conditions"
+         android:textColor="#040303"
+         android:textSize="10sp"
+         app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
  <LinearLayout
@@ -265,23 +293,27 @@
                 android:layout_marginTop="8dp"
                 android:src="@drawable/sunrise" />
 
-            <TextView
-                android:id="@+id/sunrise"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:text="00:00"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:id="@+id/sunrise"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="4dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="00:00"
+         android:textColor="#040303"
+         app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="2dp"
-                android:text="Sunrise"
-                android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="2dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="Sunrise"
+         android:textColor="#040303"
+         android:textSize="10sp"
+         app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
  <LinearLayout
@@ -302,23 +334,27 @@
                 android:layout_marginTop="8dp"
                 android:src="@drawable/sunset" />
 
-            <TextView
-                android:id="@+id/sunset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:text="00:00"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:id="@+id/sunset"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="4dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="00:00"
+         android:textColor="#0C0C0C"
+         app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="2dp"
-                android:text="Sunset"
-                android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="2dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="Sunset"
+         android:textColor="#0C0C0C"
+         android:textSize="10sp"
+         app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
  <LinearLayout
@@ -340,23 +376,27 @@
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/sea" />
 
-            <TextView
-                android:id="@+id/sea"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="4dp"
-                android:text="0000 hPa"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:id="@+id/sea"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="4dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="0000 hPa"
+         android:textColor="#0C0C0C"
+         app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="2dp"
-                android:text="Sea"
-                android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent" />
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginTop="2dp"
+         android:fontFamily="@font/merriweathersans_medium"
+         android:text="Sea"
+         android:textColor="#0C0C0C"
+         android:textSize="10sp"
+         app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
 
